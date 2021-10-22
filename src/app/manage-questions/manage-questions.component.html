@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Manage Questions</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-md-5">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="category">Category</label>
+        </div>
+        <select class="custom-select" id="category">
+          <option selected>Choose...</option>
+          <option value="1">Programming Languages</option>
+          <option value="2">Operating Systems</option>
+          <option value="3">Database concepts</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="sub-category">Sub-Category</label>
+        </div>
+        <select class="custom-select" id="sub-category">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+    <div class="viewAdd">
+      <a type="button" class="btn btn-secondary viewAddItem " [routerLink]="['./view-questions']"
+        routerLinkActive="active">
+        View
+      </a>
+      <button class="btn btn-success viewAddItem" data-toggle="modal" data-target="#modal-backdrop-add">Add
+        <span class="bi bi-plus-circle-dotted"></span>
+      </button>
+    </div>
+  </div>
+  <main role="main">
+    <router-outlet></router-outlet>
+  </main>
+  <!--Add Questions Modal-->
+  <div id="modal-backdrop-add" class="modal bg-dark fade" data-backdrop="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title text-md"><b>New Question</b></div>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <form class="">
+            <div class="form-floating mb-3">
+              <!-- <label for="Question" class="col-form-label"><h6>Question:</h6></label>                 -->
+              <textarea class="form-control rounded-4" id="Question" placeholder="Enter Question"></textarea>
+            </div>
+            <!-- <div class="form-floating mb-3">
+                    <label class="col-form-label" for="Option1">Option 1:</label>
+                    <input type="text" class="form-control rounded-4" id="Option1" placeholder="Enter Option 1">
+                </div> -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="Option1">Option 1</span>
+              </div>
+              <input type="text" class="form-control rounded-4" aria-label="Option1" aria-describedby="Option1"
+                placeholder="Enter Option 1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="Option2">Option 2</span>
+              </div>
+              <input type="text" class="form-control rounded-4" aria-label="Option2" aria-describedby="Option2"
+                placeholder="Enter Option 2">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="Option3">Option 3</span>
+              </div>
+              <input type="text" class="form-control rounded-4" aria-label="Option3" aria-describedby="Option3"
+                placeholder="Enter Option 3">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="Option4">Option 4</span>
+              </div>
+              <input type="text" class="form-control rounded-4" aria-label="Option4" aria-describedby="Option4"
+                placeholder="Enter Option 4">
+            </div>
+            <!-- <div class="form-floating mb-3">      
+                    <label for="Answer" class="col-form-label"><h6>Answer:</h6></label> 
+                    <input type="text" class="form-control rounded-4" id="Answer" placeholder="Enter Correct Answer">
+                </div> -->
+            <!-- <div class="form-floating mb-3"> -->
+            <!-- <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="checkbox" id="Option1" value="Option1" name="Answers">
+                            <label class="form-check-label" for="Option1">Option 1</label>
+                        </div>
+                        <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="checkbox" id="Option2" value="Option2" name="Answers">
+                            <label class="form-check-label" for="Option2">Option 2</label>
+                        </div>
+                        <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="checkbox" id="Option3" value="Option3" name="Answers">
+                            <label class="form-check-label" for="Option3">Option 3</label>
+                        </div>
+                        <div class="form-check form-check-inline" >
+                            <input class="form-check-input" type="checkbox" id="Option4" value="Option4" name="Answers">
+                            <label class="form-check-label" for="Option4">Option 4</label>
+                        </div>   
+                                                  -->
+
+            <div class="row d-flex ">
+              <div class="col-md-12">
+                <label for="Answer" class="col-form-label">
+                  <p>Choose the correct answers:
+                  <p>
+                </label>
+                <div class="card">
+                  <div class="card-body">
+                    <!-- <h6 class="card-title">Choose the correct answers:</h6> -->
+                    <!-- <hr > -->
+                    <label class="check">
+                      <input type="checkbox" checked> <span>Option 1</span>
+                    </label>
+                    <label class="check">
+                      <input type="checkbox"> <span>Option 2</span>
+                    </label>
+                    <label class="check">
+                      <input type="checkbox"> <span>Option 3</span>
+                    </label>
+                    <label class="check">
+                      <input type="checkbox"> <span>Option 4</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Add </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

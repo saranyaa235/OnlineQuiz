@@ -1,0 +1,166 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;  
+  }
+  /* body{
+    background:#e7eff9;
+  } */
+  table {
+    border-collapse: collapse;
+  }  
+  a.delete{
+    color:red;
+    margin: 0 5px;
+  }
+  a.edit{
+      color:orange;
+      margin: 0 5px;
+  }
+  a.delete:hover{
+    color: firebrick;
+  }
+  a.edit:hover{
+    color:goldenrod;
+  }
+  .modal-confirm {		
+    color: #636363;
+    width: 400px;
+  }
+  .modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  .modal-confirm .modal-header {
+    border-bottom: none;   
+    position: relative;
+  }
+  .modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+  }
+  .modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+  }
+  .modal-confirm .modal-body {
+    color: #999;
+  }
+  .modal-confirm .modal-footer {
+    border: none;
+    text-align: center;		
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+  }
+  .modal-confirm .modal-footer a {
+    color: #999;
+  }		
+
+  .modal-confirm .btn, .modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+  }
+  .modal-confirm .btn-secondary {
+    background: #c1c1c1;
+  }
+  .modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+  }
+  .modal-confirm .btn-danger {
+    background: #f15e5e;
+  }
+  .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+  }
+  .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+  }
+  .rounded-4 { border-radius: .5rem; }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 0
+  }
+  
+  .card .card-body {
+    padding: 1rem 1.75rem
+  }
+  
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1rem
+  }
+  
+  .card .card-title {
+    color: #000000;
+    margin-bottom: 0.625rem;
+    text-transform: capitalize;
+    font-size: 0.875rem;
+    font-weight: 500
+  }
+  label.check {
+    cursor: pointer
+  }
+  
+  label.check input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+  }
+  
+  label.check span {
+    padding: 7px 7px;
+    border: 2px solid #4e9af1;
+    border-radius:2em;
+    display: inline-block;
+    color: #4e9af1;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    /* text-shadow:  0 0.04em 0.04em rgba(0,0,0,0.35); */
+    text-align:center;
+    margin:0.2em 0.3em;
+  }
+  
+  label.check input:checked+span {
+    border-color: #4e9af1;
+    background-color: #4e9af1;
+    color: #fff;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    /* text-shadow:  0 0.04em 0.04em rgba(0,0,0,0.35); */
+    text-align:center;
+    transition: all 0.2s;
+  }
+  label.check:hover{
+    border-color: rgba(255,255,255,1);
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    line-height: 1.5rem
+  }
